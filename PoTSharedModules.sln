@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoTSharedModules", "PoTSharedModules\PoTSharedModules.csproj", "{E8F9B9E6-088C-4872-8E06-FDBF353F444D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoTSharedModules", "PoTSharedModules.csproj", "{E8F9B9E6-088C-4872-8E06-FDBF353F444D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
