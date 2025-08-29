@@ -1,3 +1,5 @@
+using System;
+
 namespace PoTSharedModules.Models.SocketMessages;
 
 public sealed record SocketMessage<T>(
