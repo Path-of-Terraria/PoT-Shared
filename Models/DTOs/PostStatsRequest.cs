@@ -1,3 +1,5 @@
+using System;
+
 namespace PoTSharedModules.Models.DTOs;
 
 public class PostStatsRequest
