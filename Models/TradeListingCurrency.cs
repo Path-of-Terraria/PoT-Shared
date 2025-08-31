@@ -4,7 +4,6 @@ namespace PoTSharedModules.Models;
 
 public enum TradeListingCurrency
 {
-	DO_NOT_USE = 0,
 	UnfoldingShard = 1,
 	GlimmeringShard = 2,
 	LimpidShard = 3,
