@@ -1,3 +1,5 @@
+using System;
+
 namespace PoTSharedModules.Models;
 
 public enum TradeListingCurrency
@@ -17,7 +19,7 @@ public class TradeListingCurrencyExtensions
 {
 	public static string GetFriendlyName(TradeListingCurrency currency)
 	{
-		string? enumName = Enum.GetName(typeof(TradeListingCurrency), currency);
+		string? enumName = Enum.GetName(currency);
 
 		if (enumName != null)
 		{
