@@ -30,6 +30,18 @@ public enum ChatColorOption
 	ScottieKnowz
 }
 
+public static class ChatColorOptionExtensions
+{
+	public static string ToDescriptionString(this ChatColorOption val)
+	{
+		var attributes = (DescriptionAttribute[]) val
+			.GetType()
+			.GetField(val.ToString())
+			.GetCustomAttributes(typeof(DescriptionAttribute), false);
+		return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+	}
+}
+
 public enum ChatIconOption
 {
 	[Description("Developer")]
@@ -43,4 +55,16 @@ public enum ChatIconOption
     
 	[Description("AtherionSupporter")]
 	AtherionSupporter,
+}
+
+public static class ChatIconOptionExtensions
+{
+	public static string ToDescriptionString(this ChatIconOption val)
+	{
+		var attributes = (DescriptionAttribute[]) val
+			.GetType()
+			.GetField(val.ToString())
+			.GetCustomAttributes(typeof(DescriptionAttribute), false);
+		return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+	}
 }
