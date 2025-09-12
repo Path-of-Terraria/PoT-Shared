@@ -1,70 +1,49 @@
-using System.ComponentModel;
+using PoTSharedModules.Models.SocketMessages;
 
 namespace PoTSharedModules.Models.DTOs;
 
 public class ChatRequest
 {
-	public required string PlayerName { get; set; }
-	public required string Message { get; set; }
+	public required GlobalChatMessageType Type { get; set; }
 	public required string SteamId { get; set; }
+	public required string Message { get; set; }
+	public required string PlayerName { get; set; }
+	public string? PlayerColor { get; set; }
+	public string? PlayerIcon { get; set; }
 }
 
-public enum ChatColorOption
+public class ChatColorOption
 {
-	[Description("#1abc9c")]
-	Supporter,
-    
-	[Description("#9b59b6")]
-	ProSupporter,
-    
-	[Description("#e74c3c")]
-	EliteSupporter,
-    
-	[Description("#9fc1ff")]
-	UltimateSupporter,
-    
-	[Description("#1e86fe")]
-	Developer,
-    
-	[Description("#aa3b3b")]
-	ScottieKnowz
-}
+	private ChatColorOption(string value) { Value = value; }
 
-public static class ChatColorOptionExtensions
-{
-	public static string ToDescriptionString(this ChatColorOption val)
+	public string Value { get; private set; }
+
+	public static ChatColorOption Supporter => new ChatColorOption("#1abc9c");
+	public static ChatColorOption ProSupporter => new ChatColorOption("#9b59b6");
+	public static ChatColorOption EliteSupporter => new ChatColorOption("#e74c3c");
+	public static ChatColorOption UltimateSupporter => new ChatColorOption("#9fc1ff");
+	public static ChatColorOption Developer => new ChatColorOption("#1e86fe");
+	public static ChatColorOption ScottieKnowz => new ChatColorOption("#aa3b3b");
+
+	public override string ToString()
 	{
-		var attributes = (DescriptionAttribute[]) val
-			.GetType()
-			.GetField(val.ToString())
-			.GetCustomAttributes(typeof(DescriptionAttribute), false);
-		return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+		return Value;
 	}
 }
 
-public enum ChatIconOption
+public class ChatIconOption
 {
-	[Description("Developer")]
-	Developer,
-    
-	[Description("WorldrendSupporter")]
-	WorldrendSupporter,
-    
-	[Description("RiftbornSupporter")]
-	RiftbornSupporter,
-    
-	[Description("AtherionSupporter")]
-	AtherionSupporter,
-}
+	private ChatIconOption(string value) { Value = value; }
 
-public static class ChatIconOptionExtensions
-{
-	public static string ToDescriptionString(this ChatIconOption val)
+	public string Value { get; private set; }
+
+	public static ChatIconOption Developer => new ChatIconOption("Developer");
+	public static ChatIconOption WorldrendSupporter => new ChatIconOption("WorldrendSupporter");
+	public static ChatIconOption RiftbornSupporter => new ChatIconOption("RiftbornSupporter");
+	public static ChatIconOption AtherionSupporter => new ChatIconOption("AtherionSupporter");
+
+	public override string ToString()
 	{
-		var attributes = (DescriptionAttribute[]) val
-			.GetType()
-			.GetField(val.ToString())
-			.GetCustomAttributes(typeof(DescriptionAttribute), false);
-		return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+		return Value;
 	}
 }
