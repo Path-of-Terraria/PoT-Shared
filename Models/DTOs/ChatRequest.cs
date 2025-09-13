@@ -15,9 +15,10 @@ public class ChatRequest
 
 public class ChatColorOption
 {
+	public ChatColorOption() {}
 	private ChatColorOption(string value) { Value = value; }
 
-	public string Value { get; }
+	public string Value { get; set; }
 
 	public static ChatColorOption Supporter => new("#1abc9c");
 	public static ChatColorOption ProSupporter => new("#9b59b6");
@@ -48,9 +49,10 @@ public class ChatColorOption
 
 public class ChatIconOption
 {
+	public ChatIconOption() {}
 	private ChatIconOption(string value) { Value = value; }
 
-	public string Value { get; private set; }
+	public string Value { get; set; }
 
 	public static ChatIconOption Developer => new("Developer");
 	public static ChatIconOption WorldrendSupporter => new("WorldrendSupporter");
