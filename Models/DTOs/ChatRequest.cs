@@ -24,6 +24,7 @@ public class ChatColorOption
 	public static ChatColorOption ProSupporter => new("#9b59b6");
 	public static ChatColorOption EliteSupporter => new("#e74c3c");
 	public static ChatColorOption UltimateSupporter => new("#9fc1ff");
+	public static ChatColorOption Contributor => new("#1e3a8a");
 	public static ChatColorOption Developer => new("#1e86fe");
 	public static ChatColorOption ScottieKnowz => new("#aa3b3b");
 
@@ -43,6 +44,8 @@ public class ChatColorOption
 			return EliteSupporter;
 		if (string.Equals(value, UltimateSupporter.ToString(), StringComparison.OrdinalIgnoreCase))
 			return UltimateSupporter;
+		if (string.Equals(value, Contributor.ToString(), StringComparison.OrdinalIgnoreCase))
+			return Contributor;
 		return null;
 	}
 }
