@@ -20,10 +20,12 @@ public class ProfileResponse
     // New fields: available chat icons and colors for the user
     public List<string>? AvailableChatIcons { get; set; }
     public List<string>? AvailableChatColors { get; set; }
+    public List<string>? AvailableDiscordRoles { get; set; }
 }
 
 public record ChosenBenefits
 {
 	public ChatIconOption? ChatIcon { get; set; }
 	public ChatColorOption? ChatColor { get; set; }
+    public string? DiscordRole { get; set; }
 }
