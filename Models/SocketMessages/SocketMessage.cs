@@ -12,5 +12,6 @@ public enum SocketMessageType
 {
 	Trade,
 	Chat,
-	Event
+	Event,
+	Announcement
 }
