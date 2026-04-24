@@ -58,6 +58,7 @@ public class ChatIconOption
 	public string Value { get; set; }
 
 	public static ChatIconOption Developer => new("Developer");
+	public static ChatIconOption Contributor => new("Contributor");
 	public static ChatIconOption WorldrendSupporter => new("WorldrendSupporter");
 	public static ChatIconOption RiftbornSupporter => new("RiftbornSupporter");
 	public static ChatIconOption AtherionSupporter => new("AtherionSupporter");
@@ -70,6 +71,8 @@ public class ChatIconOption
 	public static ChatIconOption? ToChatIconOption(string? value)
 	{
 		if (string.IsNullOrWhiteSpace(value)) return null;
+		if (string.Equals(value, Contributor.ToString(), StringComparison.OrdinalIgnoreCase))
+			return Contributor;
 		if (string.Equals(value, AtherionSupporter.ToString(), StringComparison.OrdinalIgnoreCase))
 			return AtherionSupporter;
 		if (string.Equals(value, WorldrendSupporter.ToString(), StringComparison.OrdinalIgnoreCase))
