@@ -16,6 +16,7 @@ public class ProfileResponse
     public string? Avatar { get; set; }
     
     public ChosenBenefits? ChosenBenefits { get; set; }
+    public List<string> Roles { get; set; } = [];
 
     // New fields: available chat icons and colors for the user
     public List<string>? AvailableChatIcons { get; set; }
