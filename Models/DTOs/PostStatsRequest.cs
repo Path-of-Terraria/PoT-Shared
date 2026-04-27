@@ -17,4 +17,5 @@ public class PostStatsRequest
 	public int Dexterity { get; set; }
 	public int Intelligence { get; set; }
 	public CharacterGearSnapshot? GearSnapshot { get; set; }
+	public CharacterPassiveTreeSnapshot? PassiveTreeSnapshot { get; set; }
 }
