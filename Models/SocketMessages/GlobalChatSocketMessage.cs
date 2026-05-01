@@ -13,5 +13,6 @@ public class GlobalChatSocketMessage
 public enum GlobalChatMessageType
 {
     Global,
-    Whisper
+    Whisper,
+    Discord
 }
