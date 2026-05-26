@@ -19,4 +19,5 @@ public class PostStatsRequest
 	public string? CharacterClass { get; set; }
 	public CharacterGearSnapshot? GearSnapshot { get; set; }
 	public CharacterPassiveTreeSnapshot? PassiveTreeSnapshot { get; set; }
+	public CharacterSkillsSnapshot? SkillsSnapshot { get; set; }
 }
